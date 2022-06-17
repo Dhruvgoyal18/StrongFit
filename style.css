@@ -1,0 +1,442 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+    background-color: black;
+    height: 150px;
+    width: 100%;
+    position: sticky;
+}
+
+div.logo-name {
+    color: aliceblue;
+    font-size: 35px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+label img {
+    object-fit: contain;
+    height: 100px;
+    margin-top: 25px;
+    margin-left: 55px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: aliceblue;
+    font-size: 17px;
+    padding: 7px 15px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background-color: rgb(63, 126, 120);
+    transition: 0.5s;
+    color: aqua;
+}
+
+.checkbtn {
+    font-size: 40px;
+    color: aliceblue;
+    float: right;
+    line-height: 80px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width:1000px) {
+    label.logo-name {
+        font-size: 25px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:800px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: aqua;
+        top: 100px;
+        left: 0px;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: rgb(245, 153, 33);
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+.slidershow {
+    width: 700px;
+    height: 700px;
+    overflow: hidden;
+    /* background-image: url('https://img.freepik.com/free-photo/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-his-upper-body-concept-healthy-lifestyle-sport-fitness-bodybuilding-wellbeing_155003-27879.jpg?size=626&ext=jpg&ga=GA1.2.1934288235.1654755653');
+    background-size: 100%; */
+}
+
+.middle {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation {
+    position: absolute;
+    height: 300px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 50px;
+    height: 10px;
+    border: 2px solid aqua;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover {
+    background-color: aqua;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+.containers{
+    margin: 30px;
+    width: 360px;
+    background-color: black;
+    box-shadow: 0 0 8px rgb(233, 210, 210);
+    opacity: 0.6;
+    float: right;
+    margin-right: 100px;
+}
+.containers form{
+    width: 100%;
+    text-align: center;
+    padding: 25px 20px;
+}
+form h1{
+    padding: 10px 0;
+    color: aqua;
+}
+form.id{
+    position: relative;
+}
+.id i{
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+form input{
+    width: 100%;
+    height: 50px;
+    margin: 4px 0;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background-color: black;
+    padding: 0 15px;
+    padding-right: 45px;
+    font-size: 20px;
+}
+form textarea{
+    padding: 5px 15px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background-color: black;
+    font-size: 20px;
+    width: 100%;
+    margin: 4px 0;
+}
+form button{
+    margin-top: 5px;
+    border: none;
+    background-color: aquamarine;
+    padding: 10px 0 ;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 3px;
+}
+form input:focus,
+form textarea:focus{
+    border: 1px solid aqua;
+    color: aqua;
+    transition: all 0.3s ease;
+}
+form input:focus::placeholder,
+form textarea:focus::placeholder{
+    padding-left: 4px;
+    color: aqua;
+    transition: all 0.3s ease;
+}
+/* Styling of the cards started */
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: 3px solid red; */
+    margin-top: 500px;
+    background-image: url('./bgimage2.jpeg');
+    background-size: 100%;
+    
+}
+
+
+.card{
+    background-color: aliceblue;
+    width: 270px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 15px;
+    z-index: 999;
+}
+.card p{
+    font-size: 11.5px;
+}
+.card-image{
+    background-color: aquamarine;
+    height: 150px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0 ;
+}
+.card1{
+    background-image: url('https://img.freepik.com/free-photo/big-dumbbells-white_144627-24203.jpg?size=338&ext=jpg&ga=GA1.2.1934288235.1654755653');
+}
+.card2{
+    background-image: url('https://img.freepik.com/free-photo/side-view-young-woman-riding-exercise-bike-gym_23-2147827879.jpg?size=626&ext=jpg&ga=GA1.2.1934288235.1654755653');
+}
+.card3{
+    background-image: url('https://img.freepik.com/free-photo/woman-using-treadmill-gym_23-2148769864.jpg?size=626&ext=jpg&ga=GA1.2.1934288235.1654755653');
+}
+.card4{
+    background-image: url('https://img.freepik.com/free-photo/black-white-photo-athletic-people-exercising-with-rods-cross-training-gym_637285-2453.jpg?size=626&ext=jpg&ga=GA1.2.1934288235.1654755653');
+}
+.card5{
+    background-image: url('https://img.freepik.com/free-photo/man-exercising-leg-press-machine_329181-14136.jpg?size=626&ext=jpg&ga=GA1.2.1934288235.1654755653');
+}
+
+.card h2{
+    padding: 10px;
+}
+.card p{
+    padding: 10px;
+}
+.card a{
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 10px 50px;
+    text-decoration: none;
+}
+.card:hover{
+    background-color: bisque;
+    color: aqua;
+    cursor: pointer;
+    transform: scale(1.03);
+    transform: all 1s ease;
+}
+
+.slides {
+    width: 500%;
+    height: 60%;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked~.s1 {
+    margin-left: 0;
+}
+
+#r2:checked~.s1 {
+    margin-left: -20%;
+}
+
+#r3:checked~.s1 {
+    margin-left: -40%;
+}
+
+#r4:checked~.s1 {
+    margin-left: -60%;
+}
+
+#r5:checked~.s1 {
+    margin-left: -80%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cont {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
